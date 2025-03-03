@@ -207,24 +207,6 @@ ul {
   visibility: visible;
 }
 
-@media (min-width: 769px) {
-  .nav-menu li ul ul {
-    position: absolute;
-    top: 0;
-    left: 100%;
-  }
-
-  .nav-menu li:hover>ul ul,
-  .nav-menu li ul ul:hover {
-    left: auto;
-    right: 100%;
-  }
-
-  .nav-menu li ul ul::after {
-    left: auto;
-    right: 100%;
-  }
-}
 
 /* Project Single Page */
 .project-details {
@@ -392,6 +374,66 @@ ul {
   background-color: #005c8b;
 }
 
+/* Contact Us Form Styling */
+.contact-us {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-us h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.contact-us form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-us label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.contact-us input,
+.contact-us textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-us textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.contact-us button {
+  padding: 10px 15px;
+  background: #0073aa;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-us button:hover {
+  background: #005f8a;
+}
+
+
 /* Responsive Styling */
 @media (max-width: 1024px) {
   .project-card {
@@ -428,6 +470,24 @@ ul {
   .project-card {
     flex: 1 1 calc(100% - 20px);
   }
+
+     .contact-us {
+       padding: 15px;
+     }
+  
+     .contact-us h1 {
+       font-size: 20px;
+     }
+  
+     .contact-us input,
+     .contact-us textarea {
+       font-size: 14px;
+     }
+  
+     .contact-us button {
+       font-size: 14px;
+       padding: 8px 12px;
+     }
 }
 
 @media (max-width: 576px) {
@@ -440,5 +500,24 @@ ul {
 
   .project-title {
     font-size: 1em;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-menu li ul ul {
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+
+  .nav-menu li:hover>ul ul,
+  .nav-menu li ul ul:hover {
+    left: auto;
+    right: 100%;
+  }
+
+  .nav-menu li ul ul::after {
+    left: auto;
+    right: 100%;
   }
 }
