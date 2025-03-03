@@ -1,0 +1,50 @@
+/* Custom Admin Styles for Project Meta Box */
+
+/* Form field styling */
+#project_meta .inside {
+  padding: 15px;
+}
+
+#project_meta .form-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#project_meta .form-field label {
+  font-weight: bold;
+  width: 150px;
+  margin-right: 10px;
+}
+
+#project_meta .form-field input,
+#project_meta .form-field textarea {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+#project_meta .form-field textarea {
+  resize: vertical;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+  #project_meta .form-field {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #project_meta .form-field label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  #project_meta .form-field input,
+  #project_meta .form-field textarea {
+    width: 100%;
+  }
+}
