@@ -38,7 +38,12 @@ add_action('init', 'projects_post_type', 0);
  */
 function add_project_meta_boxes()
 {
-  add_meta_box('project_meta', __('Project Details', 'ikonic-test-project'), 'project_meta_callback', 'projects');
+  add_meta_box(
+    'project_meta', // ID of the meta box
+    __('Project Details', 'ikonic-test-project'), // Title of the meta box
+    'project_meta_callback', // Callback function to display the meta box content
+    'projects' // Post type where the meta box should appear
+  );
 }
 add_action('add_meta_boxes', 'add_project_meta_boxes');
 

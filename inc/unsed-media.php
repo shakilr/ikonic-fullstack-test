@@ -160,7 +160,13 @@ class Ikonic_Media_List_Table extends WP_List_Table
  */
 function ikonic_add_admin_menu()
 {
-  add_menu_page(__('Unused Media', 'ikonic-test-project'), __('Unused Media', 'ikonic-test-project'), 'manage_options', 'unused-media', 'ikonic_admin_page');
+  add_menu_page(
+    __('Unused Media', 'ikonic-test-project'), // Page title
+    __('Unused Media', 'ikonic-test-project'), // Menu title
+    'manage_options', // Capability required to access this menu item
+    'unused-media', // Menu slug
+    'ikonic_admin_page' // Function to display the page content 
+  );
 }
 add_action('admin_menu', 'ikonic_add_admin_menu');
 
@@ -190,8 +196,8 @@ function enqueue_admin_scripts()
 
   // Localize script with AJAX parameters
   wp_localize_script('custom-admin-js', 'ajax_params', array(
-    'ajax_url' => admin_url('admin-ajax.php'),
-    'nonce'    => wp_create_nonce('project_filter_nonce'),
+    'ajax_url' => admin_url('admin-ajax.php'), // URL for the AJAX handler in the WordPress admin area
+    'nonce'    => wp_create_nonce('project_filter_nonce'), // Nonce for security purposes
   ));
 }
 add_action('admin_enqueue_scripts', 'enqueue_admin_scripts');
